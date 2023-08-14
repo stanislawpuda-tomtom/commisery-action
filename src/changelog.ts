@@ -164,6 +164,7 @@ async function generateChangelogEntry(
   changelogEntry += await getPullRequestSuffix(commit);
   changelogEntry += getIssueReferenceSuffix(commit);
   changelogEntry += getCustomSuffix(commit);
+  changelogEntry += " ()";
 
   if (commit.hexsha) {
     const sha_link = `[${commit.hexsha.slice(
