@@ -83,13 +83,13 @@ describe("Generate Changelog", () => {
       dedent(
         `## What's changed
           ### :warning: Breaking Changes
-          * Breaks the API (#123) () [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
+          * Breaks the API (#123) [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
           ### :rocket: New Features
-          * Add new feature (#123) () [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
+          * Add new feature (#123) [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
           ### :bug: Bug Fixes
-          * Avoid crash (#123) () [[37e57c](https://github.com/tomtom-international/commisery-action/commit/37e57c03317)]
+          * Avoid crash (#123) [[37e57c](https://github.com/tomtom-international/commisery-action/commit/37e57c03317)]
           ### :construction_worker: Other changes
-          * Non-bumping commit (#123) () [[47e57c](https://github.com/tomtom-international/commisery-action/commit/47e57c03317)]
+          * Non-bumping commit (#123) [[47e57c](https://github.com/tomtom-international/commisery-action/commit/47e57c03317)]
   
   
           *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
@@ -111,7 +111,7 @@ describe("Generate Changelog", () => {
       dedent(
         `## What's changed
         ### :rocket: New Features
-        * Add pull request reference (#123) () [[0x123a](https://github.com/tomtom-international/commisery-action/commit/0x123abc)]
+        * Add pull request reference (#123) [[0x123a](https://github.com/tomtom-international/commisery-action/commit/0x123abc)]
 
 
         *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
@@ -133,7 +133,7 @@ describe("Generate Changelog", () => {
       dedent(
         `## What's changed
         ### :rocket: New Features
-        * Add pull request reference (#1) () [[0x123a](https://github.com/tomtom-international/commisery-action/commit/0x123abc)]
+        * Add pull request reference (#1) [[0x123a](https://github.com/tomtom-international/commisery-action/commit/0x123abc)]
 
 
         *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
@@ -169,9 +169,9 @@ describe("Generate Changelog", () => {
       dedent(
         `## What's changed
         ### :rocket: New Features
-        * Add pull request reference (#123) (TEST-123) () [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
-        * Do GitHub things (#123) (#42) () [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
-        * Make GitHub stuff (#123) (#51) () [[37e57c](https://github.com/tomtom-international/commisery-action/commit/37e57c03317)]
+        * Add pull request reference (#123) (TEST-123) [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
+        * Do GitHub things (#123) (#42) [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
+        * Make GitHub stuff (#123) (#51) [[37e57c](https://github.com/tomtom-international/commisery-action/commit/37e57c03317)]
 
 
         *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
@@ -202,8 +202,8 @@ describe("Generate Changelog", () => {
       dedent(
         `## What's changed
         ### :rocket: New Features
-        * Add pull request reference (#123) (some-tag) () [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
-        * Do GitHub things (#123) (#42) (some-tag) () [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
+        * Add pull request reference (#123) (some-tag) [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
+        * Do GitHub things (#123) (#42) (some-tag) [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
 
 
         *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
@@ -251,7 +251,7 @@ describe("Generate Changelog", () => {
       dedent(
         `## What's changed
         ### All changes
-        * Do GitHub things (#123) (#42) () [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
+        * Do GitHub things (#123) (#42) [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
 
 
         *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
@@ -303,8 +303,8 @@ describe("Generate Changelog", () => {
       dedent(
         `## What's changed
         ### All changes
-        * This should be in all changes (#123) (TEST-123) () [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
-        * Do GitHub things (#123) (#42) () [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
+        * This should be in all changes (#123) (TEST-123) [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
+        * Do GitHub things (#123) (#42) [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
 
 
         *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
@@ -349,7 +349,7 @@ describe("Generate Changelog", () => {
       dedent(
         `## What's changed
         ### Major Changes
-        * Add pull request reference (#123) (TEST-123) () [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
+        * Add pull request reference (#123) (TEST-123) [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
 
 
         *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
@@ -398,9 +398,9 @@ describe("Generate Changelog", () => {
       dedent(
         `## What's changed
         ### Search API
-        * Add pull request reference (#123) (TEST-123) () [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
+        * Add pull request reference (#123) (TEST-123) [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
         ### Documentation
-        * Do GitHub things (#123) (#42) () [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
+        * Do GitHub things (#123) (#42) [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
 
 
         *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
@@ -461,12 +461,12 @@ describe("Generate Changelog", () => {
         `## What's changed
         ### Search
         #### :warning: Breaking Changes
-        * Add pull request reference (#123) (TEST-123) () [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
-        * Remove \`doIt(...)\` API (#123) (TEST-123) () [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
+        * Add pull request reference (#123) (TEST-123) [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
+        * Remove \`doIt(...)\` API (#123) (TEST-123) [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
         #### Documentation
-        * Do GitHub things (#123) (#42) () [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
+        * Do GitHub things (#123) (#42) [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
         ### Documentation
-        * This has no scope (#123) (#42) () [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
+        * This has no scope (#123) (#42) [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
 
 
         *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
