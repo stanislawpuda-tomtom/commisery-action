@@ -12456,6 +12456,21 @@ function getIssueReferenceSuffix(commit) {
     return "";
 }
 /**
+ * Generates a suffix based on 'suffix' token in git trailer
+ */
+function getCustomSuffix(commit) {
+    const suffixes = [];
+    for (const footer of commit.footers) {
+        if (footer.token.toLowerCase() === "suffix") {
+            suffixes.push(footer.value);
+        }
+    }
+    if (suffixes.length > 0) {
+        return ` (${suffixes.join(", ")})`;
+    }
+    return "";
+}
+/**
  * Creates an entry in the Changelog based on the provided
  * Conventional Commit message.
  */
@@ -12467,6 +12482,7 @@ function generateChangelogEntry(commit) {
             .toUpperCase()}${commit.description.slice(1)}`;
         changelogEntry += yield getPullRequestSuffix(commit);
         changelogEntry += getIssueReferenceSuffix(commit);
+        changelogEntry += getCustomSuffix(commit);
         if (commit.hexsha) {
             const sha_link = `[${commit.hexsha.slice(0, 6)}](https://github.com/${owner}/${repo}/commit/${commit.hexsha})`;
             changelogEntry += ` [${sha_link}]`;
