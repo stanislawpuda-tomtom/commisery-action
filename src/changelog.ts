@@ -131,6 +131,24 @@ function getIssueReferenceSuffix(commit: ConventionalCommitMessage): string {
 }
 
 /**
+ * Generates a suffix based on 'suffix' token in git trailer
+ */
+function getCustomSuffix(commit: ConventionalCommitMessage): string {
+  const suffixes: string[] = [];
+  for (const footer of commit.footers) {
+    if (footer.token.toLowerCase() === "suffix") {
+      suffixes.push(footer.value);
+    }
+  }
+
+  if (suffixes.length > 0) {
+    return ` (${suffixes.join(", ")})`;
+  }
+
+  return "";
+}
+
+/**
  * Creates an entry in the Changelog based on the provided
  * Conventional Commit message.
  */
@@ -145,6 +163,7 @@ async function generateChangelogEntry(
 
   changelogEntry += await getPullRequestSuffix(commit);
   changelogEntry += getIssueReferenceSuffix(commit);
+  changelogEntry += getCustomSuffix(commit);
 
   if (commit.hexsha) {
     const sha_link = `[${commit.hexsha.slice(

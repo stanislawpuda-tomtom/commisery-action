@@ -179,6 +179,38 @@ describe("Generate Changelog", () => {
     );
   });
 
+  test("Contains custom suffix", async () => {
+    const bump: IVersionBumpTypeAndMessages = {
+      foundVersion: new SemVer({ major: 1, minor: 0, patch: 0 }),
+      requiredBump: SemVerType.MINOR,
+      processedCommits: createMessages([
+        {
+          message:
+            "feat: add pull request reference\n\nThis is the body\n\nSuffix: some-tag",
+          sha: "17e57c03317",
+        },
+        {
+          message:
+            "feat: do GitHub things\n\nThis is the body\n\nImplements #42\nsuffix: some-tag",
+          sha: "27e57c03317",
+        }
+      ]),
+      initialDevelopment: false,
+    };
+    const changelog = await generateChangelog(bump);
+    expect(changelog).toEqual(
+      dedent(
+        `## What's changed
+        ### :rocket: New Features
+        * Add pull request reference (#123) (some-tag) [[17e57c](https://github.com/tomtom-international/commisery-action/commit/17e57c03317)]
+        * Do GitHub things (#123) (#42) (some-tag) [[27e57c](https://github.com/tomtom-international/commisery-action/commit/27e57c03317)]
+
+
+        *Diff since last release: [1.0.0...1.1.0](https://github.com/tomtom-international/commisery-action/compare/1.0.0...1.1.0)*`
+      )
+    );
+  });
+
   test("Exclusion labels (Global)", async () => {
     const bump: IVersionBumpTypeAndMessages = {
       foundVersion: new SemVer({ major: 1, minor: 0, patch: 0 }),
